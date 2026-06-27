@@ -1,0 +1,21 @@
+package Xpath;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class xpathByAxis {
+public static void main(String[] args) {
+		
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		
+		driver.get("file:///C:/Users/intel/Downloads/Xpath%20By%20Axis.html");
+		String text = driver.findElement(By.xpath("//td[text()='dhurandhar']/following-sibling::td[2]")).getText();
+		System.out.println(text);
+		driver.quit();
+		
+
+}
+}
